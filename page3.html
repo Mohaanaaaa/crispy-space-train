@@ -1,0 +1,258 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   template
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://img.freepik.com/free-vector/outer-space-background-with-planets-stars_107791-17549.jpg?t=st=1736419325~exp=1736422925~hmac=2678a1ad16f133a995afd933605941024a864fd27a1f425637d2cd48c1e77f4d&w=1060') no-repeat center center/cover;
+      z-index: -1;
+      opacity: 80;
+    }
+  </style>
+ </head>
+ <body class="font-roboto bg-gray-100 text-white">
+  <header class="bg-transparent shadow">
+   <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+    <div>
+     <h1 class="text-3xl font-bold">
+      My Portfolio
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-4">
+     <a class="text-white hover:text-gray-300" href="#about">
+      About
+     </a>
+     <a class="text-white hover:text-gray-300" href="#skills">
+      Skills
+     </a>
+     <a class="text-white hover:text-gray-300" href="#projects">
+      Projects
+     </a>
+     <a class="text-white hover:text-gray-300" href="#contact">
+      Contact
+     </a>
+    </nav>
+    <div class="md:hidden">
+     <button id="menu-btn" class="text-white focus:outline-none">
+      <i class="fas fa-bars"></i>
+     </button>
+    </div>
+   </div>
+   <nav id="mobile-menu" class="hidden md:hidden">
+    <a class="block text-white hover:text-gray-300 px-4 py-2" href="#about">
+     About
+    </a>
+    <a class="block text-white hover:text-gray-300 px-4 py-2" href="#skills">
+     Skills
+    </a>
+    <a class="block text-white hover:text-gray-300 px-4 py-2" href="#projects">
+     Projects
+    </a>
+    <a class="block text-white hover:text-gray-300 px-4 py-2" href="#contact">
+     Contact
+    </a>
+   </nav>
+  </header>
+  <main class="container mx-auto px-6 py-12">
+   <section class="my-12" id="about">
+    <h2 class="text-4xl font-bold mb-6">
+     About Me
+    </h2>
+    <div class="flex flex-col md:flex-row items-center">
+      <p class="text-lg">
+        Welcome to my space realm!
+      </p><br>
+      <p class="text-lg">
+        Hi everyone, I am Mohana Y from Bengaluru, India.
+      </p>
+      <p class="text-lg">
+        Hello! I'm a passionate developer with experience in creating dynamic and responsive web applications. I love coding and am always eager to learn new technologies and improve my skills.
+       </p>
+      <p class="text-lg">
+        Welcome to my space realm!
+      </p>
+      <p class="text-lg">
+        "Beyond coding, I enjoy reading books, traveling in nature, and playing both indoor and outdoor games. Additionally, I have a passion for wildlife photography, where I capture the beauty of the natural world."
+      </p>
+    </div>
+   </section>
+   <section class="my-12" id="skills">
+    <h2 class="text-4xl font-bold mb-6">
+     Skills
+    </h2>
+    <div class="space-y-4">
+     <div>
+      <h3 class="text-xl font-semibold">
+       HTML
+      </h3>
+      <div class="w-full bg-gray-200 rounded-full h-4">
+       <div class="bg-blue-600 h-4 rounded-full" style="width: 90%">
+       </div>
+      </div>
+     </div>
+     <div>
+      <h3 class="text-xl font-semibold">
+       CSS
+      </h3>
+      <div class="w-full bg-gray-200 rounded-full h-4">
+       <div class="bg-blue-600 h-4 rounded-full" style="width: 85%">
+       </div>
+      </div>
+     </div>
+     <div>
+      <h3 class="text-xl font-semibold">
+       JavaScript
+      </h3>
+      <div class="w-full bg-gray-200 rounded-full h-4">
+       <div class="bg-blue-600 h-4 rounded-full" style="width: 80%">
+       </div>
+      </div>
+     </div>
+     <div>
+      <h3 class="text-xl font-semibold">
+       React
+      </h3>
+      <div class="w-full bg-gray-200 rounded-full h-4">
+       <div class="bg-blue-600 h-4 rounded-full" style="width: 75%">
+       </div>
+      </div>
+     </div>
+     <div>
+      <h3 class="text-xl font-semibold">
+       Tailwind CSS
+      </h3>
+      <div class="w-full bg-gray-200 rounded-full h-4">
+       <div class="bg-blue-600 h-4 rounded-full" style="width: 70%">
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="my-12" id="projects">
+    <h2 class="text-4xl font-bold mb-6">
+     Projects
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <div class="bg-transparent shadow-lg rounded-lg overflow-hidden">
+      <img alt="Screenshot of Project 1" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/BfNBnKjcBEUlNCdWWwYgKfqrRHbhYfV9IWIeenCRUCYyxbagC.jpg" width="400"/>
+      <div class="p-6 bg-transparent">
+       <h3 class="text-xl font-semibold mb-2">
+        Project 1
+       </h3>
+       <p class="text-gray-300 mb-4">
+        A brief description of Project 1, highlighting its features and technologies used.
+       </p>
+       <a class="text-blue-600 hover:underline" href="#">
+        View Project
+       </a>
+      </div>
+     </div>
+     <div class="bg-transparent shadow-lg rounded-lg overflow-hidden">
+      <img alt="Screenshot of Project 2" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/ZfgOLCsNFvwSC6CVgX02OykfQm6Rf3dDVfGqUNfoJzzEybagC.jpg" width="400"/>
+      <div class="p-6 bg-transparent">
+       <h3 class="text-xl font-semibold mb-2">
+        Project 2
+       </h3>
+       <p class="text-gray-300 mb-4">
+        A brief description of Project 2, highlighting its features and technologies used.
+       </p>
+       <a class="text-blue-600 hover:underline" href="#">
+        View Project
+       </a>
+      </div>
+     </div>
+     <div class="bg-transparent shadow-lg rounded-lg overflow-hidden">
+      <img alt="Screenshot of Project 3" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/5eqQC1kPFNUKVyRsoRw8Qce6HWAS94b5En4f74l0HONl8mGoA.jpg" width="400"/>
+      <div class="p-6 bg-transparent">
+       <h3 class="text-xl font-semibold mb-2">
+        Project 3
+       </h3>
+       <p class="text-gray-300 mb-4">
+        A brief description of Project 3, highlighting its features and technologies used.
+       </p>
+       <a class="text-blue-600 hover:underline" href="#">
+        View Project
+       </a>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="my-12" id="contact">
+    <h2 class="text-4xl font-bold mb-6">
+     Contact
+    </h2>
+    <form class="space-y-4 bg-transparent">
+     <div>
+      <label class="block text-lg font-semibold" for="name">
+       Name
+      </label>
+      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 bg-transparent text-white" id="name" type="text"/>
+     </div>
+     <div>
+      <label class="block text-lg font-semibold" for="email">
+       Email
+      </label>
+      <input class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 bg-transparent text-white" id="email" type="email"/>
+     </div>
+     <div>
+      <label class="block text-lg font-semibold" for="message">
+       Message
+      </label>
+      <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 bg-transparent text-white" id="message" rows="4"></textarea>
+     </div>
+     <button class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700" type="submit">
+      Send Message
+     </button>
+    </form>
+   </section>
+  </main>
+  <footer class="bg-transparent shadow mt-12">
+   <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+    <p class="text-white">
+     © 2023 My Portfolio. All rights reserved.
+    </p>
+    <div class="space-x-4">
+     <a class="text-white hover:text-gray-300" href="#">
+      <i class="fab fa-facebook-f">
+      </i>
+     </a>
+     <a class="text-white hover:text-gray-300" href="#">
+      <i class="fab fa-twitter">
+      </i>
+     </a>
+     <a class="text-white hover:text-gray-300" href="#">
+      <i class="fab fa-linkedin-in">
+      </i>
+     </a>
+     <a class="text-white hover:text-gray-300" href="#">
+      <i class="fab fa-github">
+      </i>
+     </a>
+    </div>
+   </div>
+  </footer>
+  <script>
+   document.getElementById('menu-btn').addEventListener('click', function() {
+     var menu = document.getElementById('mobile-menu');
+     if (menu.classList.contains('hidden')) {
+       menu.classList.remove('hidden');
+     } else {
+       menu.classList.add('hidden');
+     }
+   });
+  </script>
+ </body>
+</html>

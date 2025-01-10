@@ -1,0 +1,131 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+  Portfolio
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+        body {
+            font-family: 'Orbitron', sans-serif;
+        }
+        .animate-fly {
+            animation: fly 3s ease-in-out forwards;
+        }
+        .animate-rocket {
+            animation: rocket 3s ease-in-out forwards;
+        }
+        .animate-fade-in {
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        .animate-fade-out {
+            animation: fadeOut 2s ease-in-out forwards;
+        }
+        @keyframes fly {
+            0% { transform: translateY(-100vh); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes rocket {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-100vh); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+        @keyframes fadeOut {
+            0% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+  </style>
+ </head>
+ <body class="bg-black text-white">
+  <!-- First Page -->
+  <div class="h-screen flex flex-col items-center justify-center relative" id="first-page">
+   <img alt="A vast space background with stars and galaxies" class="absolute inset-0 w-full h-full object-cover z-0" height="1080" src="./background images/background.gif" width="1920"/>
+   <div class="z-10 text-center">
+    <img alt="An astronaut icon waving hello" class="mx-auto mb-4 animate-fly" height="250" id="astronaut-hello" src="https://cdna.artstation.com/p/assets/images/images/050/392/912/original/nelson-tiapa-gif-con-telefono.gif?1654734490" width="250"/>
+    <h1 class="text-4xl opacity-0" id="hello-text">
+     Hello, I'M Mohanaa!
+    </h1>
+   </div>
+  </div>
+  <!-- Second Page -->
+  <div class="h-screen flex flex-col items-center justify-center relative hidden" id="second-page">
+   <img alt="A vast space background with stars and galaxies" class="absolute inset-0 w-full h-full object-cover z-0" height="1080" src="./background images/background 2.gif" width="1920"/>
+   <div class="z-10 text-center">
+    <img alt="An astronaut icon asking to start a ride" class="mx-auto mb-4" height="250" id="astronaut-ride" src="https://media3.giphy.com/media/vSEdkIt1g7cwpEo38f/giphy.webp?cid=ecf05e47mn3pwuh2fifz2z7ypwd6at2jrqpbtb2imscruyfs&ep=v1_gifs_related&rid=giphy.webp&ct=s" width="250"/>
+    <h1 class="text-4xl mb-4 opacity-0" id="ride-text">
+     Ready to start dev space journey?
+    </h1>
+    <button class="bg-transparent hover:bg-blue-500 text-white-700 font-semibold hover:text-white py-2 px-4 border border-white-500 hover:border-transparent rounded-full" id="start-ride">
+     Start Ride
+    </button>
+    
+    <!-- Fullscreen GIF -->
+    <div id="fullscreen-gif" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background-color:black; z-index:1000;">
+        <img src="./background images/background45.gif" style="width:100%; height:100%; object-fit:cover;" />
+    </div>
+    </div>
+  </div>
+
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+            const firstPage = document.getElementById('first-page');
+            const secondPage = document.getElementById('second-page');
+            const thirdPage = document.getElementById('third-page');
+            const startRideButton = document.getElementById('start-ride');
+            const astronautHello = document.getElementById('astronaut-hello');
+            const astronautRide = document.getElementById('astronaut-ride');
+            const helloText = document.getElementById('hello-text');
+            const rideText = document.getElementById('ride-text');
+
+            astronautHello.addEventListener('animationend', () => {
+                helloText.classList.add('animate-fade-in');
+                setTimeout(() => {
+                    firstPage.classList.add('hidden');
+                    secondPage.classList.remove('hidden');
+                    rideText.classList.add('animate-fade-in');
+                    startRideButton.classList.add('animate-fade-in');
+                }, 3000);
+            });
+
+            startRideButton.addEventListener('click', () => {
+                rideText.classList.add('animate-fade-out');
+                startRideButton.classList.add('animate-fade-out');
+                astronautRide.classList.add('animate-rocket');
+                astronautRide.addEventListener('animationend', () => {
+                    secondPage.classList.add('hidden');
+                    thirdPage.classList.remove('hidden');
+                });
+            });
+        });
+        
+       
+     let rideStarted = false;
+
+    document.getElementById('start-ride').addEventListener('click', function() {
+        if (!rideStarted) {
+            rideStarted = true; 
+
+            // Hide the astronaut GIF
+            document.getElementById('astronaut-ride').style.display = 'none';
+            
+            // Show the full-screen GIF
+            document.getElementById('fullscreen-gif').style.display = 'block';
+
+            // Redirect to the new page after 2 seconds
+            setTimeout(function() {
+                window.location.href = 'page3.html'; 
+            }, 3000); //
+        }
+    });
+  </script>
+ </body>
+</html>
+
+
